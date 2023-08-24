@@ -20,7 +20,7 @@ gem install foreman
 
 ## Configuring the local environment
 
-Create a postgres container, MUST run at root folder of this project because we are mapping out the unix socket file
+Create a postgres container. The command MUST be run at root folder of this project because we are mapping out the unix socket file
 ```sh
 docker run --name rails-tailwind-poc -p 5432:5432 -v $(pwd)/db/postgresql:/run/postgresql -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=postgres -e POSTGRES_USER=$(whoami) -e POSTGRES_PASSWORD -d postgres:15.4
 ```
