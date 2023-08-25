@@ -1,6 +1,6 @@
 # Rails + Tailwind POC
 
-## Creating the application
+## How I created this repo
 
 Install PostgreSQL GEM
 ```sh
@@ -16,6 +16,16 @@ rails new rails-tailwind-poc --css tailwind --database postgresql
 Install foreman to run local server
 ```sh
 gem install foreman
+```
+
+Install clearance to handle user authentication
+```sh
+bundle add clearance:2.6.0
+```
+
+Configure clearance
+```sh
+bin/rails generator clearance:install
 ```
 
 ## Configuring the local environment
