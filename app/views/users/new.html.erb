@@ -1,14 +1,14 @@
-<div id="clearance" class="sign-up">
-  <h2><%= t(".title") %></h2>
+<div id="clearance" class="sign-up mt-10 mx-auto bg-gray-100 rounded-lg p-5">
+  <h2 class="font-black text-2x">Sign Up</h2>
 
-  <%= form_for @user do |form| %>
+  <%= form_for @user, html: { class: ' space-y-5' } do |form| %>
     <%= render partial: '/users/form', object: form %>
 
     <div class="submit-field">
-      <%= form.submit %>
+      <%= form.submit class: 'btn-primary' %>
     </div>
 
-    <div class="other-links">
+    <div class="other-links text-sm">
       <%= link_to t(".sign_in"), sign_in_path %>
     </div>
   <% end %>

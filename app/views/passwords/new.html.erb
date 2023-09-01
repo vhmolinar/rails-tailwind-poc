@@ -1,16 +1,20 @@
-<div id="clearance" class="password-reset">
-  <h2><%= t(".title") %></h2>
+<div id="clearance" class="password-reset mx-auto bg-gray-100 rounded-lg p-5">
+  <h2 class="font-black text-2x">Reset your password</h2>
 
   <p><%= t(".description") %></p>
 
-  <%= form_for :password, url: passwords_path do |form| %>
+  <%= form_for :password, url: passwords_path, html: { class: 'my-5 space-y-5' } do |form| %>
     <div class="text-field">
-      <%= form.label :email %>
+      <%= form.label :email, class: 'block' %>
       <%= form.email_field :email %>
     </div>
 
     <div class="submit-field">
-      <%= form.submit %>
+      <%= form.submit class: 'btn-primary' %>
+    </div>
+
+    <div class="other-links text-sm">
+      <%= link_to 'Back', :back %>
     </div>
   <% end %>
 </div>
